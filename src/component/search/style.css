@@ -1,0 +1,14 @@
+.Specialization{background-color: #fff; padding: 0.5rem ;}
+/* .Specialization, */
+.Functional-Area,
+.location fieldset{margin-top: 2rem;}
+.Specialization fieldset,
+.Functional-Area fieldset
+{max-height: 250px; overflow: overlay;
+    background-color: #fff; padding: 0.5rem}
+.location{margin-top: 2rem;}
+.location .locaion-inner{padding: 0.5rem;min-height: 200px;
+    background: #fff;
+    }
+
+

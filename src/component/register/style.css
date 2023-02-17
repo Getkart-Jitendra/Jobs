@@ -1,0 +1,27 @@
+.border-cus{border-radius: 15px;}
+.Personal-information{    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    padding: 10px 12px 30px 28px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.Personal-information label{padding: 0 15px;}
+.TextField-without-border-radius fieldset {border-radius: 0;}
+.Personal-information-heading{
+    background-color: #ff8800;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 0 0 0 1rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+.register-submit{margin-bottom: 50px !important;}
+button.register-submit{
+    min-width: 130px;
+    min-height: 50px;
+    border: 1px solid #ff8800;
+    color: #ff8800;
+}
+button.register-submit:hover{background-color:#ff8800 ;color: #fff;border: 1px solid #ff8800;}

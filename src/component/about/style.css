@@ -1,0 +1,11 @@
+
+.about-bg-color{min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-color: #7f7f7f;}
+.about-bg-color h1{font-size: 3rem;
+    color: #fff;
+    margin-bottom: 0;}
+    .about-bg-color h3{color: #fff;
+        font-size: 22px;
+        margin-bottom: 2rem;}

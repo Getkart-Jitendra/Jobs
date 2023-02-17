@@ -1,0 +1,26 @@
+.user-name,
+.user-pass{margin: 2rem 0;}
+.user-name div,
+.user-pass div{width: 100%;}
+.user-name div input,
+.user-pass div input{background-color: #fff;}
+.submit-register{margin-bottom: 2rem;}
+.model-inner-2{padding: 1.5rem 3rem;}
+.text-footer{font-size: 14px;}
+.emp-zon{color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+}
+.menu-hand h6{margin-left: 50px;}
+.menu-hand h6:first-child{margin-left: 0;}
+.menu-right{justify-content: flex-end;}
+.menu-hand a{text-decoration: none;color: #fff;font-size: 17px;}
+.submenuouter{top: 30px !important}
+.nobg:hover{background-color: transparent !important;}
+.test-submenu li a{color: #333;  text-decoration: none; min-width: 100px;text-align: left;}
+.test-submenu li section div{padding: 0;}
+.test-submenu li section div button{color: #333;font-size: 1rem;padding: 0;}
+header.menu-hand{background-color: #369;}
