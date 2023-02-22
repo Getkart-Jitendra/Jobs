@@ -1,14 +1,47 @@
-.Specialization{background-color: #fff; padding: 0.5rem ;}
+.Specialization {
+}
 /* .Specialization, */
 .Functional-Area,
-.location fieldset{margin-top: 2rem;}
+.location fieldset {
+  margin-top: 2rem;
+}
 .Specialization fieldset,
-.Functional-Area fieldset
-{max-height: 250px; overflow: overlay;
-    background-color: #fff; padding: 0.5rem}
-.location{margin-top: 2rem;}
-.location .locaion-inner{padding: 0.5rem;min-height: 200px;
-    background: #fff;
-    }
+.Functional-Area fieldset {
+    max-height: 250px;
+    overflow: overlay;
+    padding: 0.7rem;
+    width: 250px;
+    background-color: #fff;
+}
+.location {
+  margin-top: 2rem;
+}
+.location .locaion-inner {
+  padding: 0.5rem;
+  min-height: 200px;
+  background: #fff;
+  max-width: 250px;
+}
+.Industry-inner,
+.Functional-inner {
+  max-height: 250px;
+  overflow: overlay;
+  min-width: 100%;
+}
 
 
+@media screen and (max-width: 900px) {
+.option-bar{display: grid; grid-template-columns: 5fr 5fr;}
+.Specialization,
+.Functional-Area, 
+.location fieldset,
+.location {
+  margin-top: 0.1rem;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  .option-bar{display: grid; grid-template-columns: 10fr;}
+  .searchresult .job-search{display: grid; grid-template-columns: 0.1fr 9fr;}
+}

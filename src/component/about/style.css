@@ -9,3 +9,13 @@
     .about-bg-color h3{color: #fff;
         font-size: 22px;
         margin-bottom: 2rem;}
+
+@media screen and (max-width: 760px) {
+        .about-bg-color h3 {
+            color: #fff;
+            font-size: 17px;
+            margin-bottom: 1rem;
+}
+.about-bg-color h1{font-size: 2rem;}
+
+}

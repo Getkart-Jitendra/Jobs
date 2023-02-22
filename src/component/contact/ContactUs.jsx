@@ -29,7 +29,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div style={{backgroundColor: "#fafafa", paddingBottom: "4rem"}}>
+    <div style={{ backgroundColor: "#fafafa", paddingBottom: "4rem" }}>
       <div>
         <div style={{ height: "60vh", width: "100%" }}>
           <GoogleMapReact
@@ -48,87 +48,92 @@ const ContactUs = () => {
 
       <Container>
         <div className="contact-area">
-        <h1>Get in Touch</h1>
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "48%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            placeholder="Full Name"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Person2Icon />
-                </InputAdornment>
-              ),
-            }}
-          />
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            placeholder="Specialization"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <InsertDriveFileIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            placeholder="Email address"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <EmailIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
-          <TextField
-            id="outlined-basic"
-            variant="outlined"
-            placeholder="Phone Number"
-            type="number"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <PhoneIcon />
-                </InputAdornment>
-              ),
-            }}
-          />
+          <h1>Get in Touch</h1>
           <Box
-            component="div"
-            className="cuwidth"
+            component="form"
             sx={{
-              "& > :not(style)": { m: 0, width: "100% !importent" },
+              "& > :not(style)": { m: 1, width: "48%" },
             }}
             noValidate
             autoComplete="off"
+            className="mobile-full"
           >
-            <div>
-              <FormControl fullWidth>
-                <TextareaAutosize
-                  variant="outlined"
-                  placeholder="Phone Number"
-                  className="custom-design"
-                />
-              </FormControl>
+            <TextField
+              className="mobile-full-inner"
+              id="outlined-basic"
+              variant="outlined"
+              placeholder="Full Name"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Person2Icon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              className="mobile-full-inner"
+              id="outlined-basic"
+              variant="outlined"
+              placeholder="Specialization"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <InsertDriveFileIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              className="mobile-full-inner"
+              id="outlined-basic"
+              variant="outlined"
+              placeholder="Email address"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              className="mobile-full-inner"
+              id="outlined-basic"
+              variant="outlined"
+              placeholder="Phone Number"
+              type="number"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PhoneIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <Box
+              component="div"
+              className="cuwidth"
+              sx={{
+                "& > :not(style)": { m: 0, width: "100% !importent" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <div>
+                <FormControl fullWidth>
+                  <TextareaAutosize
+                    variant="outlined"
+                    placeholder="Phone Number"
+                    className="custom-design"
+                  />
+                </FormControl>
+              </div>
+            </Box>
+            <div className="sendconteact">
+              <Button variant="contented">Send</Button>
             </div>
           </Box>
-          <div className="sendconteact">
-            <Button variant="contented">Send</Button>
-          </div>
-        </Box>
         </div>
       </Container>
     </div>

@@ -104,7 +104,7 @@ const JobPost = () => {
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                   >
-                    <ListItemButton style={{ padding: "1px 0px" }}>
+                    <ListItemButton style={{ padding: "1px 0px" }} className="mobile-view-design">
                       <ListItemIcon className="widthcus">
                         <CabinIcon fontSize="small" />
                       </ListItemIcon>
@@ -116,9 +116,7 @@ const JobPost = () => {
                       <ListItemIcon className="widthcus">
                         <ControlPointIcon fontSize="small" />
                       </ListItemIcon>
-                      <ListItemText
-                        primary={`Experience: ${item.Experience}`}
-                      />
+                      <ListItemText primary={`Experience: ${item.Experience}`} />
                     </ListItemButton>
                     <ListItemButton pd="0" style={{ padding: "1px 0px" }}>
                       <ListItemIcon className="widthcus">

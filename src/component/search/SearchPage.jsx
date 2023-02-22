@@ -209,13 +209,14 @@ const SearchPage = () => {
     <>
       <section style={{ backgroundColor: "#f8f8f8", marginTop: "1rem" }}>
         <Container>
-          <h2 textleft style={{ margin: "1rem 0 0 0" }}>
+          <h2 textleft style={{ padding: "3rem 0 1rem 0" }}>
             Filter Jobs Result
           </h2>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6} md={3} lg={3}>
-              <h3>Specialization</h3>
+            <Grid item xs={12} sm={12} md={4} lg={3}>
+              <div className="option-bar">
               <div className="Specialization">
+                <h3>Specialization</h3>
                 <FormControl component="fieldset">
                   {checkboxValue.map((item, i) => {
                     return (
@@ -230,16 +231,17 @@ const SearchPage = () => {
                     );
                   })}
                 </FormControl>
-              </div>
+              </div>              
               <div className="Functional-Area">
                 <h3>Functional Area</h3>
                 <FormControl
                   component="fieldset"
-                  style={{
-                    maxHeight: "250px",
-                    overflow: "overlay",
-                    minWidth: "100%",
-                  }}
+                  className="Functional-inner"
+                  // style={{
+                  //   maxHeight: "250px",
+                  //   overflow: "overlay",
+                  //   minWidth: "100%",
+                  // }}
                 >
                   {Functional.map((item, i) => {
                     return (
@@ -255,7 +257,6 @@ const SearchPage = () => {
                   })}
                 </FormControl>
               </div>
-
               <div className="location">
                 <h3>Location</h3>
                 <div className="locaion-inner">
@@ -274,11 +275,12 @@ const SearchPage = () => {
                 <h3>Industry</h3>
                 <FormControl
                   component="fieldset"
-                  style={{
-                    maxHeight: "250px",
-                    overflow: "overlay",
-                    minWidth: "100%",
-                  }}
+                  className="Industry-inner"
+                  // style={{
+                  //   maxHeight: "250px",
+                  //   overflow: "overlay",
+                  //   minWidth: "100%",
+                  // }}
                 >
                   {Industry.map((item, i) => {
                     return (
@@ -294,12 +296,13 @@ const SearchPage = () => {
                   })}
                 </FormControl>
               </div>
+</div>
             </Grid>
-            <Grid item xs={12} sm={6} md={9} lg={9}>
+            <Grid item xs={12} sm={12} md={8} lg={9}>
               {JobPostoption.map((item, i) => {
                 return (
                   <>
-                    <div className="other-bg">
+                    <div className="other-bg searchresult">
                       <p>
                         <strong>{item.VacanciesName}</strong>
                       </p>
@@ -309,7 +312,7 @@ const SearchPage = () => {
                         component="nav"
                         aria-labelledby="nested-list-subheader"
                       >
-                        <ListItemButton style={{ padding: "1px 0px" }}>
+                        <ListItemButton style={{ padding: "1px 0px" }} className="job-search">
                           <ListItemIcon className="widthcus">
                             <CabinIcon fontSize="small" />
                           </ListItemIcon>

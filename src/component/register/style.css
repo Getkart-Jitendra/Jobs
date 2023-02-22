@@ -25,3 +25,7 @@ button.register-submit{
     color: #ff8800;
 }
 button.register-submit:hover{background-color:#ff8800 ;color: #fff;border: 1px solid #ff8800;}
+
+@media screen and (max-width: 760px) {
+    .Personal-information{    padding: 10px 12px 30px 12px;}
+}

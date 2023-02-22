@@ -5,5 +5,13 @@
     border-radius: 5px;}
 .other-bg item button{border: 2px solid #ff8d00;
     color: #ff8d00;font-size: 16px;}
-    .other-bg item button:hover{border: 2px solid #ff8d00;
+.other-bg item button:hover{border: 2px solid #ff8d00;
         color: #fff;background-color: #ff8d00;}
+.data-center h1, .data-center p{text-align: justify;}
+
+@media screen and (max-width: 760px) {
+.other-bg .mobile-view-design{padding: 1px 0px; display: grid;
+        grid-template-columns: 0.1fr 5fr;}
+
+
+}

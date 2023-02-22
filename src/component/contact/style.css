@@ -21,3 +21,12 @@
 .contact-area{padding: 0.1rem 1rem;
     margin: 3rem 0 0 0;border-radius: 5px;
     background-color: #fff;}
+
+
+
+
+
+ @media screen and (max-width: 880px) {
+.mobile-full .mobile-full-inner{width: 98%;}
+
+    }
