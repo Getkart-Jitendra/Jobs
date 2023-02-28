@@ -18,3 +18,11 @@
     display: flex;
     align-items: center;
     justify-content: center;}
+
+    .social-media ul li a:first-child{margin-left: 0;}
+    .social-media ul li{justify-content: center;}
+
+
+    @media screen and (max-width: 767px) {
+        .topbottom-spacing {padding: 25px 0; }
+      }

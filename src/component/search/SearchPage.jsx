@@ -392,7 +392,7 @@ const SearchPage = () => {
 
               <Stack spacing={2}>
                 <Pagination
-                  count={10}
+                  count={5}
                   variant="outlined"
                   shape="rounded"
                   style={{ justifyContent: "flex-end" }}

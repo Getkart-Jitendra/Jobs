@@ -1,44 +1,28 @@
 import React, { useState } from "react";
 
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import UserLogin from "./UserLogin";
-import MenuItem from "@mui/material/MenuItem";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Menu from "@mui/material/Menu";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Link } from "react-router-dom";
-// import {Link} from "react-dom"
-import { Container } from "@mui/material";
-// import MenuIcon from '@mui/icons-material/Menu';
-
-// import SearchPage from "../search/SearchPage";
+import {
+  Container,
+  Menu,
+  MenuItem,
+  IconButton,
+  Typography,
+  Toolbar,
+  Box,
+  AppBar,
+} from "@mui/material";
+import joblogo from "../../assets/images/home/job-logo.png";
 
 const Navbar = () => {
-  // const [auth, setAuth] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [showMediaIcon, setShowMediaIcon] = useState(false);
-
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
-  // const handleChange = (event) => {
-  //   setAuth(event.target.checked);
-  // };
-
-  // const handleMenu = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
-
-  // const handleClose = () => {
-  //   setAnchorEl(null);
-  // };
   const isMenuOpen = Boolean(anchorEl);
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -47,7 +31,6 @@ const Navbar = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
-
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -68,11 +51,9 @@ const Navbar = () => {
     >
       <div className="test-submenu">
         <MenuItem onClick={handleMenuClose}>
-          {/* Profile */}
           <UserLogin name="Login"></UserLogin>
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          {/* My account */}
           <Link to="/signup">Sign Up</Link>
         </MenuItem>
       </div>
@@ -88,6 +69,7 @@ const Navbar = () => {
         top: "0",
         backgroundColor: "#fff",
         zIndex: "1000",
+        boxShadow: "0px 1px 10px 3px #f5f5f5",
       }}
     >
       <Box>
@@ -97,7 +79,7 @@ const Navbar = () => {
               <Typography variant="h6" component="h6">
                 <Link to="/">Home</Link>
               </Typography>
-              <Typography variant="h6" component="h6">               
+              <Typography variant="h6" component="h6">
                 <Link to="/SearchPage">Jobs</Link>
               </Typography>
               <Typography variant="h6" component="h6">
@@ -124,7 +106,6 @@ const Navbar = () => {
                   {renderMenu}
                 </Box>
               </Typography>
-
               <Typography variant="h6" component="h6">
                 <Link to="/contactus">Contact us</Link>
               </Typography>
@@ -132,55 +113,83 @@ const Navbar = () => {
           </Container>
         </AppBar>
       </Box>
-      <nav className="main-nav" onClick={() => setShowMediaIcon(!showMediaIcon)}>
-        {/* 1st Logo part */}
-        <div className="web-logo">Web Logo</div>
-
-        {/* 2nd Menu part  */}
+      <nav className="main-nav">
+        <div className="web-logo">
+          <Link to="/">
+            <img src={joblogo} />
+          </Link>
+        </div>
         <div></div>
-
-        {/* 3nd Menu part  */}
         <div
-          className={showMediaIcon ? "menu-link mobile-menu-link" : "menu-link"}
+          className={
+            showMediaIcon === true ? "menu-link mobile-menu-link" : "menu-link"
+          }
         >
           <ul className="mobile-menu-custom">
-            <li>
-              
+            <li
+              onClick={() => {
+                setShowMediaIcon(!showMediaIcon);
+              }}
+            >
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setShowMediaIcon(!showMediaIcon);
+              }}
+            >
               <Link to="/SearchPage">Jobs</Link>
-             
+            </li>
+            <li
+              onClick={() => {
+                setShowMediaIcon(!showMediaIcon);
+              }}
+            >
+              <Link to="/about">About us</Link>
             </li>
             <li>
-              <Link to="/about">About us</Link>
-              
+              <UserLogin
+                name="Employer Zone"
+                onClick={() => {
+                  setShowMediaIcon(!showMediaIcon);
+                }}
+              />
             </li>
-            <li>             
-                <UserLogin name="Employer Zone" />            
-              
-            </li>
-            <li>             
-            <ul className="dropdown">
-              <li>
-              <UserLogin name="Login"></UserLogin>
-                {/* <Link to="/contactus">Contact us</Link>  */}
+            <li>
+              <ul className="dropdown">
+                <li
+                  onClick={() => {
+                    setShowMediaIcon(!showMediaIcon);
+                  }}
+                >
+                  <UserLogin name="Login"></UserLogin>
                 </li>
-              <li>
-              <Link to="/signup">Sign Up</Link>
-                {/* <Link to="/contactus">Contact us</Link>  */}
+                <li
+                  onClick={() => {
+                    setShowMediaIcon(!showMediaIcon);
+                  }}
+                >
+                  <Link to="/signup">Sign Up</Link>
                 </li>
-            </ul>
+              </ul>
             </li>
-            <li>             
-            <Link to="/contactus">Contact us</Link> 
+            <li
+              onClick={() => {
+                setShowMediaIcon(!showMediaIcon);
+              }}
+            >
+              <Link to="/contactus">Contact us</Link>
             </li>
           </ul>
         </div>
         <div className="hambutger-menu">
-          <a href="#" onClick={() => setShowMediaIcon(!showMediaIcon)}>
+          <IconButton
+            onClick={() => {
+              setShowMediaIcon(!showMediaIcon);
+            }}
+          >
             <MenuIcon />
-          </a>
+          </IconButton>
         </div>
       </nav>
     </div>

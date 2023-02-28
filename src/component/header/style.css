@@ -149,4 +149,6 @@ header.menu-hand {
     align-items: center;
     justify-content: center;
   }
+.web-logo a img{max-width: 180px;}
+
 }
